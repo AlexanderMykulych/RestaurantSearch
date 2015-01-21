@@ -1,0 +1,13 @@
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\Restaurant.Domain.dll
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\Restaurant.Domain.pdb
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\obj\Debug\Restaurant.Domain.dll
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\obj\Debug\Restaurant.Domain.pdb
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\Restaurant.Domain.dll.config
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\EntityFramework.dll
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\EntityFramework.SqlServer.dll
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\EntityFramework.xml
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\bin\Debug\EntityFramework.SqlServer.xml
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\obj\Debug\Restaurant.Domain.csprojResolveAssemblyReference.cache
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\obj\Debug\Restaurant.Domain.Migrations.AddRestaurant.resources
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\obj\Debug\Restaurant.Domain.csproj.GenerateResource.Cache
+E:\AllProject\RestaurantS\RestaurantSearch\Restaurant\Restaurant.Domain\obj\Debug\Restaurant.Domain.Migrations.DecRestaurantId.resources
