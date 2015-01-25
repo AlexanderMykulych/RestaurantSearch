@@ -13,6 +13,18 @@ namespace Restaurant.Web.Controllers
     public class HomeController : Controller
     {
         IRestaurantDb _db = new _RestaurantDb();
+
+        public ActionResult RestaurantSearch(string term)
+        {
+            var model = _db.Restaurants
+                                .Where(x => x.Name.StartsWith(term))
+                                .Take(10)
+                                .Select(x => new 
+                                {
+                                    label = x.Name
+                                });
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult Index(int? page, string searchTerm = null)
         {
             ViewBag.searchTerm = searchTerm;

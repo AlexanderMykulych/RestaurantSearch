@@ -10,25 +10,26 @@
 <link href="~/Content/PagedList.css" type="text/css" rel="stylesheet" />
 <div class="message">@TempData["Message"]</div>
 <h2>List of Restaurants</h2>
-@*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
-{
-    <input type="search" name="searchTerm" />
-    <input type="submit" value="Search"/>
-}*@
 
-@using (Ajax.BeginForm( "Index",
-        new AjaxOptions
-        {
-            HttpMethod = "get",
-            InsertionMode = InsertionMode.Replace,
-            UpdateTargetId = "restaurantList"
-        }))
-{
-    <input type="search" name="searchTerm" value=@ViewBag.searchTerm />
-    <input type="submit" value="Search" />
-}
+<form method="get" action="@Url.Action("Index")"
+      data-otf-ajax="true" data-otf-target="#restaurantList">
 
-    
-    @Html.Partial("_RestaurantsItem", Model)
+        <input type="search" name="searchTerm" data-otf-restaurantsearch="@Url.Action("RestaurantSearch")"  />
+        <input type="submit" value="Search" />
 
+</form>
+
+@*@using (Ajax.BeginForm( "Index",
+            new AjaxOptions
+            {
+                HttpMethod = "get",
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "restaurantList"
+            }))
+    {
+        <input type="search" name="searchTerm" value=@ViewBag.searchTerm />
+        <input type="submit" value="Search" />
+    }*@
+
+  @Html.Partial("_RestaurantsItem", Model)
    
