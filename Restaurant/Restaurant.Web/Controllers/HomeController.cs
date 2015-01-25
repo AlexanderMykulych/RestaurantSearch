@@ -13,11 +13,20 @@ namespace Restaurant.Web.Controllers
     public class HomeController : Controller
     {
         IRestaurantDb _db = new _RestaurantDb();
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string searchTerm = null)
         {
+            ViewBag.searchTerm = searchTerm;
             var model = _db.Restaurants
+                                .Where(x => searchTerm == null || x.Name.StartsWith(searchTerm))
+                               // .Where(x => x.Name.StartsWith("2"))
                                 .OrderBy(x => x.Name)
                                 .ToPagedList(page ?? 1, 10);
+
+            if (Request.IsAjaxRequest())
+            {
+
+                return PartialView("_RestaurantsItem", model);
+            }
 
             return View(model);
         }

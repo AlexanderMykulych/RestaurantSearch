@@ -316,6 +316,7 @@
     <Content Include="Views\Home\Delete.cshtml" />
     <Content Include="Views\Home\Create.cshtml" />
     <Content Include="Views\Home\AddReview.cshtml" />
+    <Content Include="Views\Home\_RestaurantsItem.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
