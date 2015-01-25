@@ -18,11 +18,21 @@
         return false;
     };
 
+    var submitRestSearchForm = function (event, ui) {
+        var input = $(this);
+
+        input.val(ui.item.label);
+
+        var form = input.parents("form:first");
+        form.submit();
+    };
+
     var createSearchingFilds = function () {
         var input = $(this);
         var options = {
             source: input.attr("data-otf-restaurantsearch"),
-            autoFocus: true
+            autoFocus: true,
+            select: submitRestSearchForm
         }
 
         input.autocomplete(options);
