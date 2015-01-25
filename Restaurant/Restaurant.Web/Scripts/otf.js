@@ -11,8 +11,9 @@
         $.ajax(options).done(function (data) {
             var target = $(form.attr("data-otf-target"));
            
-
-            target.replaceWith(data);
+            var htmlData = $(data);
+            target.replaceWith(htmlData);
+            htmlData.show("fold");
         });
 
         return false;
@@ -31,15 +32,36 @@
         var input = $(this);
         var options = {
             source: input.attr("data-otf-restaurantsearch"),
-            autoFocus: true,
+            
             select: submitRestSearchForm
         }
 
         input.autocomplete(options);
     };
 
+    var paginateClick = function () {
+        var a = $(this);
+        var options = {
+            url: a.attr("href"),
+            type: "get"
+        }
+        
+       // alert(a.parents("div.pagedList").attr("data-otf-target"));
+        $.ajax(options).done(function (data) {
+            var target = $(a.parents("div.pagedList").attr("data-otf-target"));
+           // alert("asdasd");
+            var htmlData = $(data);
+            target.replaceWith(htmlData);
+            htmlData.show("highlight");
+        });
+
+        return false;
+    };
+
 
     $("form[data-otf-ajax='true']").submit(ajaxFormSubmit);
 
     $("input[data-otf-restaurantsearch]").each(createSearchingFilds);
+
+    $(".main-content").on("click", ".pagedList a", paginateClick);
 });

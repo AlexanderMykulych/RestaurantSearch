@@ -47,12 +47,14 @@
 
 
     </table>
-    @Html.PagedListPager((IPagedList)Model, pageId => Url.Action("Index", new { page = pageId, searchTerm = ViewBag.searchTerm}),
+    <div class="pagedList" data-otf-target="#restaurantList">
+        @Html.PagedListPager((IPagedList)Model, pageId => Url.Action("Index", new { page = pageId, searchTerm = ViewBag.searchTerm }),
                                                                         new PagedListRenderOptions
                                                                         {
                                                                             LinkToFirstPageFormat = "First",
                                                                             LinkToLastPageFormat = "Last",
                                                                             LinkToNextPageFormat = "Next",
                                                                             LinkToPreviousPageFormat = "Back"
-                                                                        }) 
+                                                                        })
+    </div>
 </div>
