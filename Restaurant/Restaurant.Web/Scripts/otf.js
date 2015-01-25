@@ -21,7 +21,8 @@
     var createSearchingFilds = function () {
         var input = $(this);
         var options = {
-            source: input.attr("data-otf-restaurantsearch")
+            source: input.attr("data-otf-restaurantsearch"),
+            autoFocus: true
         }
 
         input.autocomplete(options);
